@@ -1,0 +1,75 @@
+sequenceDiagram
+    participant User as 👤 User
+    participant CS  as Content Script
+    participant SW  as Service Worker
+    participant API as FastAPI Backend
+    participant LLM as Ollama (LLM)
+    participant EMB as Ollama (Embeddings)
+    participant VDB as ChromaDB
+    participant DB  as SQLite
+    participant NM  as Chrome Notifications
+
+    User->>CS: Types conversation text
+    CS->>CS: MutationObserver fires
+    CS->>CS: Debounce (3s)
+    CS->>CS: SecurityFilter.sanitize()
+    CS->>SW: CONTEXT_UPDATE {source, text}
+
+    SW->>SW: Check snooze / rate limit
+    SW->>SW: Load user settings
+    SW->>API: POST /api/v1/recommend
+
+    par AI Analysis (parallel)
+        API->>LLM: Detect emotion
+        LLM-->>API: {emotion, confidence, reason}
+    and
+        API->>LLM: Classify context
+        LLM-->>API: {context, confidence}
+    and
+        API->>LLM: Detect intent
+        LLM-->>API: {intent}
+    end
+
+    API->>DB: Load user memory
+    DB-->>API: {liked_songs, preferred_genres, ...}
+
+    API->>EMB: embed_query(emotion, context, intent, genres)
+    EMB-->>API: query_vector[768]
+
+    API->>VDB: query(vector, top_k=20)
+    VDB-->>API: candidate_songs[]
+
+    API->>API: HybridScorer.score_all()
+    Note over API: emotion×0.4 + context×0.25<br/>+ intent×0.15 + history×0.2
+
+    API->>API: YouTubeService.build_url()
+    API->>DB: record_recommendation(user_id, song_id)
+    API-->>SW: RecommendResponse{recommendation, emotion, context, intent}
+
+    SW->>SW: StorageService.addRecommendation()
+    SW->>NM: NotificationManager.show()
+    NM->>User: 🎵 Chrome Notification
+
+    alt User clicks Play
+        User->>NM: [▶ Play Song]
+        NM->>SW: FEEDBACK {action: "play"}
+        SW->>API: POST /api/v1/feedback
+        API->>DB: UPDATE genre_scores
+        NM->>User: Opens YouTube tab
+    else User clicks Like
+        User->>NM: [👍 Like]
+        NM->>SW: FEEDBACK {action: "like"}
+        SW->>API: POST /api/v1/feedback
+        API->>DB: liked_songs += song_id
+        API->>DB: genre_scores[genre] += 1.0
+    else User clicks Dislike
+        User->>NM: [👎 Dislike]
+        NM->>SW: FEEDBACK {action: "dislike"}
+        SW->>API: POST /api/v1/feedback
+        API->>DB: disliked_songs += song_id
+    else User clicks Snooze
+        User->>NM: [Snooze]
+        NM->>SW: SNOOZE {minutes: 60}
+        SW->>SW: chrome.alarms.create()
+        SW->>SW: setSnoozeUntil(timestamp)
+    end

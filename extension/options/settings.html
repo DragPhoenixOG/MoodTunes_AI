@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MoodTunes AI – Settings</title>
+  <style>
+    :root {
+      --bg:#0f0f13;--surface:#1a1a24;--surface2:#242433;
+      --accent:#7c5cfc;--accent2:#fc5c7d;
+      --text:#e8e8f0;--muted:#6b6b88;--border:rgba(255,255,255,0.07);
+      --green:#34c759;--amber:#ff9f0a;--radius:10px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh;padding:40px}
+    .container{max-width:580px;margin:0 auto}
+    h1{font-size:22px;font-weight:700;margin-bottom:4px}
+    .subtitle{color:var(--muted);font-size:13px;margin-bottom:28px}
+
+    /* Badges */
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+    .badge{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border-radius:20px;font-size:11px;font-weight:600}
+    .badge-green{background:rgba(52,199,89,.12);color:var(--green)}
+    .badge-purple{background:rgba(124,92,252,.12);color:#a78bfa}
+    .badge-amber{background:rgba(255,159,10,.12);color:var(--amber)}
+
+    /* Sections */
+    .section{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:16px}
+    .section-title{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin-bottom:16px}
+    .field{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border)}
+    .field:last-child{border-bottom:none;padding-bottom:0}
+    .field-info{flex:1}
+    .field-label{font-size:13px;font-weight:500}
+    .field-desc{font-size:11px;color:var(--muted);margin-top:2px}
+    .field-control{margin-left:20px}
+
+    /* Toggle */
+    .toggle{position:relative;display:inline-block;width:40px;height:22px}
+    .toggle input{opacity:0;width:0;height:0}
+    .slider{position:absolute;inset:0;background:var(--surface2);border-radius:11px;transition:background .2s;cursor:pointer}
+    .slider::before{content:"";position:absolute;width:16px;height:16px;left:3px;top:3px;background:var(--muted);border-radius:50%;transition:transform .2s,background .2s}
+    input:checked+.slider{background:var(--accent)}
+    input:checked+.slider::before{transform:translateX(18px);background:#fff}
+
+    /* Inputs */
+    input[type=text],input[type=number],select{
+      background:var(--surface2);border:1px solid var(--border);color:var(--text);
+      padding:6px 10px;border-radius:6px;font-size:12px
+    }
+    input[type=text]{width:200px}
+    input[type=number]{width:80px}
+    select{width:220px;cursor:pointer}
+
+    /* Buttons */
+    .btn{padding:8px 18px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;border:none;transition:opacity .15s}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-primary:hover{opacity:.85}
+    .btn-danger{background:var(--accent2);color:#fff}
+    .btn-danger:hover{opacity:.85}
+    .btn-ghost{background:var(--surface2);color:var(--text)}
+    .btn-ghost:hover{background:var(--surface)}
+
+    .actions{display:flex;gap:10px;margin-top:24px}
+    .status{display:none;margin-top:12px;padding:8px 14px;border-radius:6px;font-size:12px}
+    .status.success{display:block;background:rgba(52,199,89,.13);color:var(--green)}
+    .status.error{display:block;background:rgba(252,92,125,.13);color:var(--accent2)}
+
+    /* Model info card */
+    .model-card{background:rgba(124,92,252,.07);border:1px solid rgba(124,92,252,.2);
+      border-radius:8px;padding:12px 14px;margin-top:10px;font-size:12px;color:var(--muted)}
+    .model-card strong{color:var(--text)}
+
+    code{background:var(--surface2);padding:1px 5px;border-radius:4px;font-size:11px;color:#a78bfa}
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="badges">
+    <span class="badge badge-green">🔒 100% Local Conversations</span>
+    <span class="badge badge-purple">⚡ Powered by Groq API</span>
+    <span class="badge badge-amber">🧠 Local Embeddings</span>
+  </div>
+
+  <h1>🎵 MoodTunes AI</h1>
+  <p class="subtitle">Settings &amp; Preferences</p>
+
+  <!-- General -->
+  <div class="section">
+    <div class="section-title">General</div>
+    <div class="field">
+      <div class="field-info">
+        <div class="field-label">Enable MoodTunes AI</div>
+        <div class="field-desc">Master on/off switch for all monitoring</div>
+      </div>
+      <div class="field-control">
+        <label class="toggle"><input type="checkbox" id="enabled" checked><span class="slider"></span></label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="field-info">
+        <div class="field-label">Show Notifications</div>
+        <div class="field-desc">Display Chrome notification with song recommendation</div>
+      </div>
+      <div class="field-control">
+        <label class="toggle"><input type="checkbox" id="notificationsEnabled" checked><span class="slider"></span></label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="field-info">
+        <div class="field-label">Minimum Interval</div>
+        <div class="field-desc">Seconds between recommendations (min: 10)</div>
+      </div>
+      <div class="field-control">
+        <input type="number" id="minInterval" value="60" min="10" max="3600">
+      </div>
+    </div>
+  </div>
+
+  <!-- Backend / AI Model -->
+  <div class="section">
+    <div class="section-title">AI Backend</div>
+    <div class="field">
+      <div class="field-info">
+        <div class="field-label">Backend URL</div>
+        <div class="field-desc">FastAPI server (default: localhost)</div>
+      </div>
+      <div class="field-control">
+        <input type="text" id="backendUrl" value="http://localhost:8000">
+      </div>
+    </div>
+    <div class="field">
+      <div class="field-info">
+        <div class="field-label">Groq Model</div>
+        <div class="field-desc">LLM used for emotion/context detection</div>
+      </div>
+      <div class="field-control">
+        <select id="groqModel">
+          <option value="llama-3.1-8b-instant">Llama 3.1 8B (fast, free)</option>
+          <option value="llama-3.3-70b-versatile">Llama 3.3 70B (smart)</option>
+          <option value="mixtral-8x7b-32768">Mixtral 8x7B (balanced)</option>
+          <option value="gemma2-9b-it">Gemma 2 9B (Google)</option>
+        </select>
+      </div>
+    </div>
+    <div class="model-card">
+      <strong>Groq API</strong> processes emotion/context detection in the cloud — but
+      <strong>your conversations never leave your machine</strong>. Only a small anonymised
+      signal is sent (emotion label, not your text).<br><br>
+      Embeddings run <strong>100% locally</strong> via <code>sentence-transformers</code>.
+      Get a free API key at <code>console.groq.com</code>.
+    </div>
+  </div>
+
+  <!-- Privacy & Data -->
+  <div class="section">
+    <div class="section-title">Privacy &amp; Data</div>
+    <div class="field">
+      <div class="field-info">
+        <div class="field-label">Clear Recommendation History</div>
+        <div class="field-desc">Removes all stored recommendations from this browser</div>
+      </div>
+      <div class="field-control">
+        <button class="btn btn-danger" id="clearHistory">Clear</button>
+      </div>
+    </div>
+    <div class="field">
+      <div class="field-info">
+        <div class="field-label">Reset Learned Preferences</div>
+        <div class="field-desc">Clears genre/artist memory (liked songs, etc.)</div>
+      </div>
+      <div class="field-control">
+        <button class="btn btn-danger" id="resetPrefs">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="btn btn-primary" id="saveBtn">Save Settings</button>
+    <button class="btn btn-ghost" id="testBtn">Test Backend</button>
+  </div>
+  <div id="status" class="status"></div>
+</div>
+
+<script type="module">
+  const $ = id => document.getElementById(id);
+
+  async function load() {
+    const { settings = {} } = await chrome.storage.local.get('settings');
+    $('enabled').checked            = settings.enabled !== false;
+    $('notificationsEnabled').checked = settings.notificationsEnabled !== false;
+    $('minInterval').value          = settings.minInterval || 60;
+    $('backendUrl').value           = settings.backendUrl  || 'http://localhost:8000';
+    $('groqModel').value            = settings.groqModel   || 'llama-3.1-8b-instant';
+  }
+
+  async function save() {
+    const settings = {
+      enabled:              $('enabled').checked,
+      notificationsEnabled: $('notificationsEnabled').checked,
+      minInterval:          parseInt($('minInterval').value) || 60,
+      backendUrl:           $('backendUrl').value.trim(),
+      groqModel:            $('groqModel').value,
+    };
+    await chrome.storage.local.set({ settings });
+    showStatus('✅ Settings saved!', 'success');
+  }
+
+  async function testBackend() {
+    const url = $('backendUrl').value.trim();
+    showStatus('Testing...', 'success');
+    try {
+      const resp = await fetch(`${url}/api/v1/health`);
+      const data = await resp.json();
+      const groq  = data.groq_api  ? '✅' : '⚠️';
+      const songs = data.song_count || 0;
+      showStatus(
+        `${groq} Backend OK · Groq: ${data.groq_model || '?'} · Songs: ${songs}`,
+        data.groq_api ? 'success' : 'error'
+      );
+    } catch (e) {
+      showStatus(`❌ Cannot reach ${url} — is the backend running?`, 'error');
+    }
+  }
+
+  function showStatus(msg, type) {
+    const el = $('status');
+    el.textContent = msg;
+    el.className = `status ${type}`;
+    setTimeout(() => { el.className = 'status'; }, 5000);
+  }
+
+  $('saveBtn').addEventListener('click', save);
+  $('testBtn').addEventListener('click', testBackend);
+  $('clearHistory').addEventListener('click', async () => {
+    await chrome.storage.local.remove('recommendations');
+    showStatus('History cleared.', 'success');
+  });
+  $('resetPrefs').addEventListener('click', async () => {
+    await chrome.storage.local.remove('userMemory');
+    showStatus('Preferences reset.', 'success');
+  });
+
+  load();
+</script>
+</body>
+</html>

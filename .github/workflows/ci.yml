@@ -1,0 +1,91 @@
+name: MoodTunes AI CI (Groq)
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  backend-tests:
+    name: Backend Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+
+    env:
+      GROQ_API_KEY: test_key_for_ci   # mocked in tests
+      GROQ_MODEL: llama-3.1-8b-instant
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt pytest pytest-asyncio anyio httpx coverage
+
+      - name: Create test .env
+        run: |
+          echo "GROQ_API_KEY=test_key_for_ci" > .env
+          echo "GROQ_MODEL=llama-3.1-8b-instant" >> .env
+          echo "EMBEDDING_MODEL=all-MiniLM-L6-v2" >> .env
+          echo "CHROMA_PATH=./data/chromadb" >> .env
+          echo "DB_PATH=./data/moodtunes.db" >> .env
+          mkdir -p data
+
+      - name: Run unit tests
+        run: pytest tests/unit -v --tb=short
+
+      - name: Run integration tests
+        run: pytest tests/integration -v --tb=short
+
+      - name: Coverage report
+        run: coverage run -m pytest tests/unit tests/integration && coverage report --fail-under=75
+
+  extension-check:
+    name: Extension Syntax Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check manifest is valid JSON
+        run: python3 -c "import json; json.load(open('extension/manifest.json')); print('manifest.json OK')"
+
+      - name: Check no Ollama references in extension
+        run: |
+          if grep -r "ollama" extension/ 2>/dev/null; then
+            echo "❌ Found Ollama references in extension"
+            exit 1
+          fi
+          echo "✅ No Ollama references found"
+
+      - name: Check no Docker references in extension
+        run: |
+          if grep -ri "docker" extension/ 2>/dev/null; then
+            echo "❌ Found Docker references in extension"
+            exit 1
+          fi
+          echo "✅ No Docker references"
+
+  lint:
+    name: Python Lint
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install ruff
+      - run: ruff check . --ignore E501,F401 || true

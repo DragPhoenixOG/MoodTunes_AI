@@ -1,0 +1,8 @@
+backend/.env
+backend/data/moodtunes.db
+backend/data/chromadb/
+backend/data/songs_dataset.json
+backend/venv/
+node_modules/
+.venv/
+venv/
