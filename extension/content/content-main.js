@@ -1,91 +1,119 @@
-// MoodTunes AI – Content Script Main Entry
-// Detects platform, loads appropriate adapter, throttles and sends context
+// MoodTunes AI - Content Script (no imports, no modules)
+var DEBOUNCE_MS = 5000;
+var MIN_TEXT_LENGTH = 30;
+var MAX_CONTEXT_CHARS = 2000;
 
-import { WhatsAppAdapter } from './adapters/whatsapp-adapter.js';
-import { TelegramAdapter } from './adapters/telegram-adapter.js';
-import { DiscordAdapter } from './adapters/discord-adapter.js';
-import { SlackAdapter } from './adapters/slack-adapter.js';
-import { GmailAdapter } from './adapters/gmail-adapter.js';
-import { LinkedInAdapter } from './adapters/linkedin-adapter.js';
-import { RedditAdapter } from './adapters/reddit-adapter.js';
-import { TwitterAdapter } from './adapters/twitter-adapter.js';
-import { MessengerAdapter } from './adapters/messenger-adapter.js';
-import { GenericAdapter } from './adapters/generic-adapter.js';
-import { SecurityFilter } from './security-filter.js';
-
-const DEBOUNCE_MS = 3000;         // 3 s between sends
-const MIN_TEXT_LENGTH = 20;       // ignore tiny snippets
-const MAX_CONTEXT_CHARS = 2000;   // cap what we ship to backend
-
-const PLATFORM_MAP = [
-  { match: /web\.whatsapp\.com/,  Adapter: WhatsAppAdapter,  source: 'whatsapp'  },
-  { match: /web\.telegram\.org/,  Adapter: TelegramAdapter,  source: 'telegram'  },
-  { match: /discord\.com/,        Adapter: DiscordAdapter,   source: 'discord'   },
-  { match: /app\.slack\.com/,     Adapter: SlackAdapter,     source: 'slack'     },
-  { match: /mail\.google\.com/,   Adapter: GmailAdapter,     source: 'gmail'     },
-  { match: /linkedin\.com/,       Adapter: LinkedInAdapter,  source: 'linkedin'  },
-  { match: /reddit\.com/,         Adapter: RedditAdapter,    source: 'reddit'    },
-  { match: /twitter\.com|x\.com/, Adapter: TwitterAdapter,   source: 'twitter'   },
-  { match: /facebook\.com/,       Adapter: MessengerAdapter, source: 'messenger' },
+var BLOCKED_DOMAINS = [
+  'bankofamerica', 'chase.com', 'wellsfargo', 'paypal.com', 'stripe.com'
 ];
 
-class ContentController {
-  constructor() {
-    this.adapter = null;
-    this.source = 'generic';
-    this.lastText = '';
-    this.debounceTimer = null;
-    this.enabled = true;
+function isSensitivePage() {
+  var host = window.location.hostname;
+  for (var i = 0; i < BLOCKED_DOMAINS.length; i++) {
+    if (host.indexOf(BLOCKED_DOMAINS[i]) !== -1) return true;
   }
+  return false;
+}
 
-  async init() {
-    // Load user settings
-    const settings = await this.loadSettings();
-    if (!settings.enabled) return;
-    this.enabled = true;
+function sanitizeText(text) {
+  return text
+    .replace(/\b\d{4,8}\b/g, '')
+    .replace(/Bearer\s+\S+/gi, '')
+    .replace(/\s{3,}/g, ' ')
+    .trim();
+}
 
-    // Detect platform
-    const url = window.location.hostname;
-    const platform = PLATFORM_MAP.find(p => p.match.test(url));
-    if (platform) {
-      this.adapter = new platform.Adapter();
-      this.source = platform.source;
-    } else {
-      this.adapter = new GenericAdapter();
-      this.source = 'generic';
+function detectPlatform() {
+  var host = window.location.hostname;
+  if (host.indexOf('web.whatsapp.com') !== -1) return 'whatsapp';
+  if (host.indexOf('web.telegram.org') !== -1) return 'telegram';
+  if (host.indexOf('discord.com') !== -1)      return 'discord';
+  if (host.indexOf('slack.com') !== -1)        return 'slack';
+  if (host.indexOf('mail.google.com') !== -1)  return 'gmail';
+  if (host.indexOf('linkedin.com') !== -1)     return 'linkedin';
+  if (host.indexOf('reddit.com') !== -1)       return 'reddit';
+  if (host.indexOf('twitter.com') !== -1 || host.indexOf('x.com') !== -1) return 'twitter';
+  if (host.indexOf('facebook.com') !== -1)     return 'messenger';
+  return 'generic';
+}
+
+function extractText(platform) {
+  var sel = 'p, h1, h2, h3';
+  if (platform === 'whatsapp')  sel = '[data-pre-plain-text], .copyable-text';
+  if (platform === 'telegram')  sel = '.tgme_widget_message_text';
+  if (platform === 'discord')   sel = '[class*="messageContent"]';
+  if (platform === 'slack')     sel = '[data-qa="message_content"]';
+  if (platform === 'gmail')     sel = '.a3s';
+  if (platform === 'reddit')    sel = '.Comment p';
+  if (platform === 'twitter')   sel = '[data-testid="tweetText"]';
+  if (platform === 'linkedin')  sel = '.feed-shared-update-v2__description';
+
+  var elements = document.querySelectorAll(sel);
+  var texts = [];
+  for (var i = 0; i < elements.length; i++) {
+    var t = elements[i].innerText && elements[i].innerText.trim();
+    if (t && t.length > 5) texts.push(t);
+  }
+  return texts.slice(-20).join('\n').slice(0, MAX_CONTEXT_CHARS);
+}
+
+// Safe message sender - handles extension context invalidated gracefully
+function safeSendMessage(payload) {
+  try {
+    chrome.runtime.sendMessage({
+      type: 'CONTEXT_UPDATE',
+      payload: payload
+    }, function(response) {
+      // Ignore response errors
+      if (chrome.runtime.lastError) {
+        // Extension was reloaded - stop the observer silently
+        if (observer) {
+          observer.disconnect();
+        }
+      }
+    });
+  } catch (e) {
+    // Extension context invalidated - stop observing
+    if (observer) {
+      observer.disconnect();
     }
-
-    // Block sensitive pages
-    if (SecurityFilter.isSensitivePage(url, document.title)) {
-      console.log('[MoodTunes] Skipping sensitive page');
-      return;
-    }
-
-    this.adapter.observe((text) => this.onTextChanged(text));
-    console.log(`[MoodTunes] Active on ${this.source}`);
-  }
-
-  onTextChanged(rawText) {
-    clearTimeout(this.debounceTimer);
-    this.debounceTimer = setTimeout(() => {
-      const cleaned = SecurityFilter.sanitize(rawText).slice(0, MAX_CONTEXT_CHARS);
-      if (cleaned.length < MIN_TEXT_LENGTH) return;
-      if (cleaned === this.lastText) return;
-      this.lastText = cleaned;
-      this.sendToBackground({ source: this.source, text: cleaned });
-    }, DEBOUNCE_MS);
-  }
-
-  sendToBackground(payload) {
-    chrome.runtime.sendMessage({ type: 'CONTEXT_UPDATE', payload });
-  }
-
-  async loadSettings() {
-    return new Promise(resolve =>
-      chrome.storage.local.get({ enabled: true }, resolve)
-    );
+    console.log('[MoodTunes] Extension reloaded - please refresh this page');
   }
 }
 
-const controller = new ContentController();
-controller.init().catch(console.error);
+var observer = null;
+
+if (!isSensitivePage()) {
+  var platform = detectPlatform();
+  console.log('[MoodTunes] Active on', platform);
+
+  var debounceTimer = null;
+  var lastText = '';
+
+  observer = new MutationObserver(function() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function() {
+      var raw = extractText(platform);
+      var clean = sanitizeText(raw);
+      if (clean.length < MIN_TEXT_LENGTH) return;
+      if (clean === lastText) return;
+      lastText = clean;
+      console.log('[MoodTunes] Change detected, sending update...');
+      safeSendMessage({ source: platform, text: clean });
+    }, DEBOUNCE_MS);
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  // Initial scan after page loads
+  setTimeout(function() {
+    var raw = extractText(platform);
+    var clean = sanitizeText(raw);
+    if (clean.length >= MIN_TEXT_LENGTH) {
+      safeSendMessage({ source: platform, text: clean });
+    }
+  }, 3000);
+
+} else {
+  console.log('[MoodTunes] Sensitive page, skipping');
+}

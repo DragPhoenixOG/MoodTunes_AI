@@ -1,0 +1,2155 @@
+[
+  {
+    "song_id": "real_0000",
+    "youtube_url": "https://www.youtube.com/results?search_query=Hall+Of+Fame+The+Script+ft.+will.i.am",
+    "playlist_url": null,
+    "title": "Hall Of Fame",
+    "artist": "The Script ft. will.i.am",
+    "genre": "Pop Rock",
+    "energy_level": "high",
+    "mood_tags": [
+      "motivational",
+      "confident",
+      "empowering"
+    ],
+    "context_tags": [
+      "career",
+      "interview",
+      "startup"
+    ],
+    "lyrics_summary": "Anyone can become legendary through dedication and hard work."
+  },
+  {
+    "song_id": "real_0001",
+    "youtube_url": "https://www.youtube.com/results?search_query=Lose+Yourself+Eminem",
+    "playlist_url": null,
+    "title": "Lose Yourself",
+    "artist": "Eminem",
+    "genre": "Hip-Hop",
+    "energy_level": "high",
+    "mood_tags": [
+      "motivational",
+      "focused",
+      "intense"
+    ],
+    "context_tags": [
+      "interview",
+      "career",
+      "startup"
+    ],
+    "lyrics_summary": "One shot one opportunity seize the moment or regret it forever."
+  },
+  {
+    "song_id": "real_0002",
+    "youtube_url": "https://www.youtube.com/results?search_query=Believer+Imagine+Dragons",
+    "playlist_url": null,
+    "title": "Believer",
+    "artist": "Imagine Dragons",
+    "genre": "Rock",
+    "energy_level": "high",
+    "mood_tags": [
+      "motivational",
+      "resilient",
+      "empowering"
+    ],
+    "context_tags": [
+      "career",
+      "gym",
+      "stress"
+    ],
+    "lyrics_summary": "Pain made me a believer turning suffering into strength."
+  },
+  {
+    "song_id": "real_0003",
+    "youtube_url": "https://www.youtube.com/results?search_query=Thunder+Imagine+Dragons",
+    "playlist_url": null,
+    "title": "Thunder",
+    "artist": "Imagine Dragons",
+    "genre": "Rock",
+    "energy_level": "high",
+    "mood_tags": [
+      "motivated",
+      "confident",
+      "triumphant"
+    ],
+    "context_tags": [
+      "career",
+      "startup",
+      "interview"
+    ],
+    "lyrics_summary": "Rising from obscurity to claim your destiny with lightning force."
+  },
+  {
+    "song_id": "real_0004",
+    "youtube_url": "https://www.youtube.com/results?search_query=Eye+of+the+Tiger+Survivor",
+    "playlist_url": null,
+    "title": "Eye of the Tiger",
+    "artist": "Survivor",
+    "genre": "Rock",
+    "energy_level": "high",
+    "mood_tags": [
+      "workout",
+      "energetic",
+      "powerful"
+    ],
+    "context_tags": [
+      "gym",
+      "workout",
+      "competition"
+    ],
+    "lyrics_summary": "Rising to the challenge fighting to stay alive and victorious."
+  },
+  {
+    "song_id": "real_0005",
+    "youtube_url": "https://www.youtube.com/results?search_query=Stronger+Kanye+West",
+    "playlist_url": null,
+    "title": "Stronger",
+    "artist": "Kanye West",
+    "genre": "Hip-Hop",
+    "energy_level": "high",
+    "mood_tags": [
+      "confident",
+      "motivational",
+      "workout"
+    ],
+    "context_tags": [
+      "gym",
+      "workout",
+      "career"
+    ],
+    "lyrics_summary": "What doesnt kill you makes you stronger better faster."
+  },
+  {
+    "song_id": "real_0006",
+    "youtube_url": "https://www.youtube.com/results?search_query=Till+I+Collapse+Eminem",
+    "playlist_url": null,
+    "title": "Till I Collapse",
+    "artist": "Eminem",
+    "genre": "Hip-Hop",
+    "energy_level": "high",
+    "mood_tags": [
+      "workout",
+      "energetic",
+      "powerful"
+    ],
+    "context_tags": [
+      "gym",
+      "workout"
+    ],
+    "lyrics_summary": "Giving everything until physically unable to go on."
+  },
+  {
+    "song_id": "real_0007",
+    "youtube_url": "https://www.youtube.com/results?search_query=Not+Afraid+Eminem",
+    "playlist_url": null,
+    "title": "Not Afraid",
+    "artist": "Eminem",
+    "genre": "Hip-Hop",
+    "energy_level": "high",
+    "mood_tags": [
+      "motivational",
+      "brave",
+      "comeback"
+    ],
+    "context_tags": [
+      "career",
+      "stress",
+      "startup"
+    ],
+    "lyrics_summary": "Overcoming fear and addiction to reclaim your life."
+  },
+  {
+    "song_id": "real_0008",
+    "youtube_url": "https://www.youtube.com/results?search_query=Roar+Katy+Perry",
+    "playlist_url": null,
+    "title": "Roar",
+    "artist": "Katy Perry",
+    "genre": "Pop",
+    "energy_level": "high",
+    "mood_tags": [
+      "empowering",
+      "confident",
+      "motivational"
+    ],
+    "context_tags": [
+      "career",
+      "interview",
+      "breakup"
+    ],
+    "lyrics_summary": "Finding your voice and inner strength to stand up for yourself."
+  },
+  {
+    "song_id": "real_0009",
+    "youtube_url": "https://www.youtube.com/results?search_query=Fight+Song+Rachel+Platten",
+    "playlist_url": null,
+    "title": "Fight Song",
+    "artist": "Rachel Platten",
+    "genre": "Pop",
+    "energy_level": "high",
+    "mood_tags": [
+      "motivational",
+      "resilient",
+      "empowering"
+    ],
+    "context_tags": [
+      "career",
+      "stress",
+      "breakup"
+    ],
+    "lyrics_summary": "This is my fight song take back my life song proving Im alright."
+  },
+  {
+    "song_id": "real_0010",
+    "youtube_url": "https://www.youtube.com/results?search_query=Unstoppable+Sia",
+    "playlist_url": null,
+    "title": "Unstoppable",
+    "artist": "Sia",
+    "genre": "Pop",
+    "energy_level": "high",
+    "mood_tags": [
+      "confident",
+      "powerful",
+      "motivational"
+    ],
+    "context_tags": [
+      "career",
+      "interview",
+      "gym"
+    ],
+    "lyrics_summary": "I am unstoppable a Porsche with no brakes."
+  },
+  {
+    "song_id": "real_0011",
+    "youtube_url": "https://www.youtube.com/results?search_query=Can%27t+Stop+the+Feeling+Justin+Timberlake",
+    "playlist_url": null,
+    "title": "Can't Stop the Feeling",
+    "artist": "Justin Timberlake",
+    "genre": "Pop",
+    "energy_level": "high",
+    "mood_tags": [
+      "happy",
+      "energetic",
+      "celebratory"
+    ],
+    "context_tags": [
+      "celebration",
+      "general"
+    ],
+    "lyrics_summary": "Nothing can stop this feeling deep inside of me."
+  },
+  {
+    "song_id": "real_0012",
+    "youtube_url": "https://www.youtube.com/results?search_query=On+Top+of+the+World+Imagine+Dragons",
+    "playlist_url": null,
+    "title": "On Top of the World",
+    "artist": "Imagine Dragons",
+    "genre": "Rock",
+    "energy_level": "high",
+    "mood_tags": [
+      "celebratory",
+      "happy",
+      "triumphant"
+    ],
+    "context_tags": [
+      "celebration",
+      "career"
+    ],
+    "lyrics_summary": "Reaching the summit after years of hard work and patience."
+  },
+  {
+    "song_id": "real_0013",
+    "youtube_url": "https://www.youtube.com/results?search_query=Power+Kanye+West",
+    "playlist_url": null,
+    "title": "Power",
+    "artist": "Kanye West",
+    "genre": "Hip-Hop",
+    "energy_level": "high",
+    "mood_tags": [
+      "powerful",
+      "confident",
+      "intense"
+    ],
+    "context_tags": [
+      "career",
+      "startup",
+      "gym"
+    ],
+    "lyrics_summary": "Confronting power influence and the weight of greatness."
+  },
+  {
+    "song_id": "real_0014",
+    "youtube_url": "https://www.youtube.com/results?search_query=Run+the+World+%28Girls%29+Beyonce",
+    "playlist_url": null,
+    "title": "Run the World (Girls)",
+    "artist": "Beyonce",
+    "genre": "Pop",
+    "energy_level": "high",
+    "mood_tags": [
+      "confident",
+      "celebratory",
+      "empowering"
+    ],
+    "context_tags": [
+      "career",
+      "celebration"
+    ],
+    "lyrics_summary": "Women power strength and dominance celebrated."
+  },
+  {
+    "song_id": "real_0015",
+    "youtube_url": "https://www.youtube.com/results?search_query=Started+From+the+Bottom+Drake",
+    "playlist_url": null,
+    "title": "Started From the Bottom",
+    "artist": "Drake",
+    "genre": "Hip-Hop",
+    "energy_level": "high",
+    "mood_tags": [
+      "motivational",
+      "triumphant",
+      "confident"
+    ],
+    "context_tags": [
+      "career",
+      "startup"
+    ],
+    "lyrics_summary": "Rising from humble beginnings to massive success."
+  },
+  {
+    "song_id": "real_0016",
+    "youtube_url": "https://www.youtube.com/results?search_query=Work+Hard+Play+Hard+Wiz+Khalifa",
+    "playlist_url": null,
+    "title": "Work Hard Play Hard",
+    "artist": "Wiz Khalifa",
+    "genre": "Hip-Hop",
+    "energy_level": "high",
+    "mood_tags": [
+      "motivated",
+      "energetic",
+      "productive"
+    ],
+    "context_tags": [
+      "career",
+      "startup",
+      "study"
+    ],
+    "lyrics_summary": "Grinding hard and celebrating success."
+  },
+  {
+    "song_id": "real_0017",
+    "youtube_url": "https://www.youtube.com/results?search_query=Titanium+David+Guetta+ft.+Sia",
+    "playlist_url": null,
+    "title": "Titanium",
+    "artist": "David Guetta ft. Sia",
+    "genre": "Electronic Pop",
+    "energy_level": "high",
+    "mood_tags": [
+      "powerful",
+      "resilient",
+      "workout"
+    ],
+    "context_tags": [
+      "gym",
+      "workout",
+      "career"
+    ],
+    "lyrics_summary": "Bulletproof and unbreakable against all adversity."
+  },
+  {
+    "song_id": "real_0018",
+    "youtube_url": "https://www.youtube.com/results?search_query=Radioactive+Imagine+Dragons",
+    "playlist_url": null,
+    "title": "Radioactive",
+    "artist": "Imagine Dragons",
+    "genre": "Rock",
+    "energy_level": "high",
+    "mood_tags": [
+      "powerful",
+      "intense",
+      "energetic"
+    ],
+    "context_tags": [
+      "gym",
+      "gaming",
+      "startup"
+    ],
+    "lyrics_summary": "A new age begins with explosive revolutionary energy."
+  },
+  {
+    "song_id": "real_0019",
+    "youtube_url": "https://www.youtube.com/results?search_query=Castle+on+the+Hill+Ed+Sheeran",
+    "playlist_url": null,
+    "title": "Castle on the Hill",
+    "artist": "Ed Sheeran",
+    "genre": "Pop Rock",
+    "energy_level": "medium",
+    "mood_tags": [
+      "nostalgic",
+      "motivated",
+      "reflective"
+    ],
+    "context_tags": [
+      "general",
+      "travel"
+    ],
+    "lyrics_summary": "Driving at 90 down the roads he used to remember growing up."
+  },
+  {
+    "song_id": "real_0020",
+    "youtube_url": "https://www.youtube.com/results?search_query=Someone+Like+You+Adele",
+    "playlist_url": null,
+    "title": "Someone Like You",
+    "artist": "Adele",
+    "genre": "Pop",
+    "energy_level": "low",
+    "mood_tags": [
+      "sad",
+      "heartbroken",
+      "emotional"
+    ],
+    "context_tags": [
+      "breakup",
+      "relationship"
+    ],
+    "lyrics_summary": "Letting go of a lost love while wishing them happiness."
+  },
+  {
+    "song_id": "real_0021",
+    "youtube_url": "https://www.youtube.com/results?search_query=Fix+You+Coldplay",
+    "playlist_url": null,
+    "title": "Fix You",
+    "artist": "Coldplay",
+    "genre": "Rock",
+    "energy_level": "low",
+    "mood_tags": [
+      "comforting",
+      "sad",
+      "healing"
+    ],
+    "context_tags": [
+      "stress",
+      "breakup",
+      "career"
+    ],
+    "lyrics_summary": "When you feel lost and broken you will be guided through."
+  },
+  {
+    "song_id": "real_0022",
+    "youtube_url": "https://www.youtube.com/results?search_query=The+Night+We+Met+Lord+Huron",
+    "playlist_url": null,
+    "title": "The Night We Met",
+    "artist": "Lord Huron",
+    "genre": "Indie",
+    "energy_level": "low",
+    "mood_tags": [
+      "sad",
+      "nostalgic",
+      "heartbroken"
+    ],
+    "context_tags": [
+      "breakup",
+      "relationship"
+    ],
+    "lyrics_summary": "Longing to go back to before everything went wrong."
+  },
+  {
+    "song_id": "real_0023",
+    "youtube_url": "https://www.youtube.com/results?search_query=drivers+license+Olivia+Rodrigo",
+    "playlist_url": null,
+    "title": "drivers license",
+    "artist": "Olivia Rodrigo",
+    "genre": "Pop",
+    "energy_level": "low",
+    "mood_tags": [
+      "heartbroken",
+      "sad",
+      "emotional"
+    ],
+    "context_tags": [
+      "breakup",
+      "relationship"
+    ],
+    "lyrics_summary": "Driving past the places that remind you of them."
+  },
+  {
+    "song_id": "real_0024",
+    "youtube_url": "https://www.youtube.com/results?search_query=happier+Olivia+Rodrigo",
+    "playlist_url": null,
+    "title": "happier",
+    "artist": "Olivia Rodrigo",
+    "genre": "Pop",
+    "energy_level": "low",
+    "mood_tags": [
+      "heartbroken",
+      "sad",
+      "bittersweet"
+    ],
+    "context_tags": [
+      "breakup",
+      "relationship"
+    ],
+    "lyrics_summary": "Wanting your ex to be happy even though it hurts."
+  },
+  {
+    "song_id": "real_0025",
+    "youtube_url": "https://www.youtube.com/results?search_query=Let+Her+Go+Passenger",
+    "playlist_url": null,
+    "title": "Let Her Go",
+    "artist": "Passenger",
+    "genre": "Folk Pop",
+    "energy_level": "low",
+    "mood_tags": [
+      "sad",
+      "nostalgic",
+      "reflective"
+    ],
+    "context_tags": [
+      "breakup",
+      "relationship"
+    ],
+    "lyrics_summary": "You only know what you have once youve lost it."
+  },
+  {
+    "song_id": "real_0026",
+    "youtube_url": "https://www.youtube.com/results?search_query=Skinny+Love+Bon+Iver",
+    "playlist_url": null,
+    "title": "Skinny Love",
+    "artist": "Bon Iver",
+    "genre": "Indie Folk",
+    "energy_level": "low",
+    "mood_tags": [
+      "sad",
+      "melancholic",
+      "vulnerable"
+    ],
+    "context_tags": [
+      "breakup",
+      "relationship"
+    ],
+    "lyrics_summary": "A fragile love breaking under its own weight."
+  },
+  {
+    "song_id": "real_0027",
+    "youtube_url": "https://www.youtube.com/results?search_query=Back+to+December+Taylor+Swift",
+    "playlist_url": null,
+    "title": "Back to December",
+    "artist": "Taylor Swift",
+    "genre": "Country Pop",
+    "energy_level": "low",
+    "mood_tags": [
+      "regretful",
+      "heartbroken",
+      "nostalgic"
+    ],
+    "context_tags": [
+      "breakup",
+      "relationship"
+    ],
+    "lyrics_summary": "Wishing you could go back and undo a heartbreak."
+  },
+  {
+    "song_id": "real_0028",
+    "youtube_url": "https://www.youtube.com/results?search_query=All+Too+Well+Taylor+Swift",
+    "playlist_url": null,
+    "title": "All Too Well",
+    "artist": "Taylor Swift",
+    "genre": "Country Pop",
+    "energy_level": "low",
+    "mood_tags": [
+      "heartbroken",
+      "nostalgic",
+      "emotional"
+    ],
+    "context_tags": [
+      "breakup",
+      "relationship"
+    ],
+    "lyrics_summary": "Remembering a past relationship in vivid painful detail."
+  },
+  {
+    "song_id": "real_0029",
+    "youtube_url": "https://www.youtube.com/results?search_query=Breakeven+The+Script",
+    "playlist_url": null,
+    "title": "Breakeven",
+    "artist": "The Script",
+    "genre": "Pop Rock",
+    "energy_level": "low",
+    "mood_tags": [
+      "heartbroken",
+      "sad",
+      "emotional"
+    ],
+    "context_tags": [
+      "breakup",
+      "relationship"
+    ],
+    "lyrics_summary": "Shes moved on but Im still falling apart."
+  },
+  {
+    "song_id": "real_0030",
+    "youtube_url": "https://www.youtube.com/results?search_query=Say+Something+A+Great+Big+World+ft.+Christina+Aguilera",
+    "playlist_url": null,
+    "title": "Say Something",
+    "artist": "A Great Big World ft. Christina Aguilera",
+    "genre": "Pop",
+    "energy_level": "low",
+    "mood_tags": [
+      "sad",
+      "heartbroken",
+      "giving up"
+    ],
+    "context_tags": [
+      "breakup",
+      "relationship"
+    ],
+    "lyrics_summary": "Giving up and saying goodbye to someone you love."
+  },
+  {
+    "song_id": "real_0031",
+    "youtube_url": "https://www.youtube.com/results?search_query=The+Scientist+Coldplay",
+    "playlist_url": null,
+    "title": "The Scientist",
+    "artist": "Coldplay",
+    "genre": "Rock",
+    "energy_level": "low",
+    "mood_tags": [
+      "sad",
+      "reflective",
+      "heartbroken"
+    ],
+    "context_tags": [
+      "breakup",
+      "relationship"
+    ],
+    "lyrics_summary": "Going back to the start trying to understand where love went wrong."
+  },
+  {
+    "song_id": "real_0032",
+    "youtube_url": "https://www.youtube.com/results?search_query=Happier+Ed+Sheeran",
+    "playlist_url": null,
+    "title": "Happier",
+    "artist": "Ed Sheeran",
+    "genre": "Pop",
+    "energy_level": "low",
+    "mood_tags": [
+      "bittersweet",
+      "heartbroken",
+      "sad"
+    ],
+    "context_tags": [
+      "breakup",
+      "relationship"
+    ],
+    "lyrics_summary": "Seeing your ex happy with someone else and accepting it."
+  },
+  {
+    "song_id": "real_0033",
+    "youtube_url": "https://www.youtube.com/results?search_query=When+the+Party%27s+Over+Billie+Eilish",
+    "playlist_url": null,
+    "title": "When the Party's Over",
+    "artist": "Billie Eilish",
+    "genre": "Pop",
+    "energy_level": "low",
+    "mood_tags": [
+      "sad",
+      "melancholic",
+      "heartbroken"
+    ],
+    "context_tags": [
+      "breakup",
+      "relationship"
+    ],
+    "lyrics_summary": "The quiet sadness after love ends."
+  },
+  {
+    "song_id": "real_0034",
+    "youtube_url": "https://www.youtube.com/results?search_query=Liability+Lorde",
+    "playlist_url": null,
+    "title": "Liability",
+    "artist": "Lorde",
+    "genre": "Indie Pop",
+    "energy_level": "low",
+    "mood_tags": [
+      "sad",
+      "lonely",
+      "heartbroken"
+    ],
+    "context_tags": [
+      "breakup",
+      "stress"
+    ],
+    "lyrics_summary": "Feeling like too much for people and being left alone."
+  },
+  {
+    "song_id": "real_0035",
+    "youtube_url": "https://www.youtube.com/results?search_query=Experience+Ludovico+Einaudi",
+    "playlist_url": null,
+    "title": "Experience",
+    "artist": "Ludovico Einaudi",
+    "genre": "Classical",
+    "energy_level": "low",
+    "mood_tags": [
+      "focus",
+      "calm",
+      "concentration"
+    ],
+    "context_tags": [
+      "study",
+      "coding",
+      "learning"
+    ],
+    "lyrics_summary": "Minimal piano piece evoking deep contemplation and focus."
+  },
+  {
+    "song_id": "real_0036",
+    "youtube_url": "https://www.youtube.com/results?search_query=Weightless+Marconi+Union",
+    "playlist_url": null,
+    "title": "Weightless",
+    "artist": "Marconi Union",
+    "genre": "Ambient",
+    "energy_level": "low",
+    "mood_tags": [
+      "calming",
+      "focus",
+      "relaxing"
+    ],
+    "context_tags": [
+      "study",
+      "coding",
+      "stress"
+    ],
+    "lyrics_summary": "Scientifically designed ambient track to reduce anxiety."
+  },
+  {
+    "song_id": "real_0037",
+    "youtube_url": "https://www.youtube.com/results?search_query=Strobe+deadmau5",
+    "playlist_url": null,
+    "title": "Strobe",
+    "artist": "deadmau5",
+    "genre": "Electronic",
+    "energy_level": "medium",
+    "mood_tags": [
+      "focus",
+      "productive",
+      "flow"
+    ],
+    "context_tags": [
+      "coding",
+      "study"
+    ],
+    "lyrics_summary": "Long form electronic journey perfect for deep work sessions."
+  },
+  {
+    "song_id": "real_0038",
+    "youtube_url": "https://www.youtube.com/results?search_query=Clair+de+Lune+Debussy",
+    "playlist_url": null,
+    "title": "Clair de Lune",
+    "artist": "Debussy",
+    "genre": "Classical",
+    "energy_level": "low",
+    "mood_tags": [
+      "focus",
+      "peaceful",
+      "concentration"
+    ],
+    "context_tags": [
+      "study",
+      "learning"
+    ],
+    "lyrics_summary": "Gentle moonlit piano for deep concentration and calm."
+  },
+  {
+    "song_id": "real_0039",
+    "youtube_url": "https://www.youtube.com/results?search_query=Comptine+d%27un+autre+ete+Yann+Tiersen",
+    "playlist_url": null,
+    "title": "Comptine d'un autre ete",
+    "artist": "Yann Tiersen",
+    "genre": "Classical",
+    "energy_level": "low",
+    "mood_tags": [
+      "focus",
+      "nostalgic",
+      "peaceful"
+    ],
+    "context_tags": [
+      "study",
+      "learning"
+    ],
+    "lyrics_summary": "Delicate piano from Amelie perfect for focused work."
+  },
+  {
+    "song_id": "real_0040",
+    "youtube_url": "https://www.youtube.com/results?search_query=Time+Hans+Zimmer",
+    "playlist_url": null,
+    "title": "Time",
+    "artist": "Hans Zimmer",
+    "genre": "Orchestral",
+    "energy_level": "medium",
+    "mood_tags": [
+      "focused",
+      "epic",
+      "inspiring"
+    ],
+    "context_tags": [
+      "study",
+      "coding",
+      "startup"
+    ],
+    "lyrics_summary": "Building orchestral piece from Inception that drives focus."
+  },
+  {
+    "song_id": "real_0041",
+    "youtube_url": "https://www.youtube.com/results?search_query=Interstellar+Main+Theme+Hans+Zimmer",
+    "playlist_url": null,
+    "title": "Interstellar Main Theme",
+    "artist": "Hans Zimmer",
+    "genre": "Orchestral",
+    "energy_level": "low",
+    "mood_tags": [
+      "focused",
+      "epic",
+      "peaceful"
+    ],
+    "context_tags": [
+      "study",
+      "coding"
+    ],
+    "lyrics_summary": "Vast space theme for deep concentration and wonder."
+  },
+  {
+    "song_id": "real_0042",
+    "youtube_url": "https://www.youtube.com/results?search_query=Get+Lucky+Daft+Punk+ft.+Pharrell+Williams",
+    "playlist_url": null,
+    "title": "Get Lucky",
+    "artist": "Daft Punk ft. Pharrell Williams",
+    "genre": "Electronic",
+    "energy_level": "medium",
+    "mood_tags": [
+      "productive",
+      "happy",
+      "groovy"
+    ],
+    "context_tags": [
+      "coding",
+      "general"
+    ],
+    "lyrics_summary": "Feel good groove that keeps you moving forward."
+  },
+  {
+    "song_id": "real_0043",
+    "youtube_url": "https://www.youtube.com/results?search_query=Around+the+World+Daft+Punk",
+    "playlist_url": null,
+    "title": "Around the World",
+    "artist": "Daft Punk",
+    "genre": "Electronic",
+    "energy_level": "medium",
+    "mood_tags": [
+      "focus",
+      "rhythmic",
+      "productive"
+    ],
+    "context_tags": [
+      "coding"
+    ],
+    "lyrics_summary": "Hypnotic repetitive groove for entering flow state."
+  },
+  {
+    "song_id": "real_0044",
+    "youtube_url": "https://www.youtube.com/results?search_query=Lo-Fi+Hip+Hop+Beats+ChilledCow",
+    "playlist_url": null,
+    "title": "Lo-Fi Hip Hop Beats",
+    "artist": "ChilledCow",
+    "genre": "Lo-Fi",
+    "energy_level": "low",
+    "mood_tags": [
+      "focus",
+      "relaxed",
+      "chill"
+    ],
+    "context_tags": [
+      "study",
+      "coding"
+    ],
+    "lyrics_summary": "Looping beats for studying and relaxing."
+  },
+  {
+    "song_id": "real_0045",
+    "youtube_url": "https://www.youtube.com/results?search_query=Gymnop%C3%A9die+No.1+Erik+Satie",
+    "playlist_url": null,
+    "title": "Gymnop\u00e9die No.1",
+    "artist": "Erik Satie",
+    "genre": "Classical",
+    "energy_level": "low",
+    "mood_tags": [
+      "peaceful",
+      "focus",
+      "calm"
+    ],
+    "context_tags": [
+      "study",
+      "stress"
+    ],
+    "lyrics_summary": "Slow meditative piano that calms the mind for focus."
+  },
+  {
+    "song_id": "real_0046",
+    "youtube_url": "https://www.youtube.com/results?search_query=Nuvole+Bianche+Ludovico+Einaudi",
+    "playlist_url": null,
+    "title": "Nuvole Bianche",
+    "artist": "Ludovico Einaudi",
+    "genre": "Classical",
+    "energy_level": "low",
+    "mood_tags": [
+      "peaceful",
+      "focus",
+      "emotional"
+    ],
+    "context_tags": [
+      "study",
+      "learning"
+    ],
+    "lyrics_summary": "White clouds piano piece flowing gently for deep work."
+  },
+  {
+    "song_id": "real_0047",
+    "youtube_url": "https://www.youtube.com/results?search_query=Happy+Pharrell+Williams",
+    "playlist_url": null,
+    "title": "Happy",
+    "artist": "Pharrell Williams",
+    "genre": "Pop Soul",
+    "energy_level": "high",
+    "mood_tags": [
+      "happy",
+      "cheerful",
+      "uplifting"
+    ],
+    "context_tags": [
+      "celebration",
+      "travel",
+      "general"
+    ],
+    "lyrics_summary": "Pure unapologetic happiness and joy celebrated."
+  },
+  {
+    "song_id": "real_0048",
+    "youtube_url": "https://www.youtube.com/results?search_query=Good+as+Hell+Lizzo",
+    "playlist_url": null,
+    "title": "Good as Hell",
+    "artist": "Lizzo",
+    "genre": "Pop R&B",
+    "energy_level": "high",
+    "mood_tags": [
+      "happy",
+      "confident",
+      "empowering"
+    ],
+    "context_tags": [
+      "celebration",
+      "career",
+      "breakup"
+    ],
+    "lyrics_summary": "Self love anthem for feeling unstoppable."
+  },
+  {
+    "song_id": "real_0049",
+    "youtube_url": "https://www.youtube.com/results?search_query=Blinding+Lights+The+Weeknd",
+    "playlist_url": null,
+    "title": "Blinding Lights",
+    "artist": "The Weeknd",
+    "genre": "Synth Pop",
+    "energy_level": "high",
+    "mood_tags": [
+      "excited",
+      "energetic",
+      "romantic"
+    ],
+    "context_tags": [
+      "relationship",
+      "travel",
+      "celebration"
+    ],
+    "lyrics_summary": "Neon lit rush of longing and desire."
+  },
+  {
+    "song_id": "real_0050",
+    "youtube_url": "https://www.youtube.com/results?search_query=Dancing+Queen+ABBA",
+    "playlist_url": null,
+    "title": "Dancing Queen",
+    "artist": "ABBA",
+    "genre": "Pop",
+    "energy_level": "high",
+    "mood_tags": [
+      "happy",
+      "celebratory",
+      "carefree"
+    ],
+    "context_tags": [
+      "celebration",
+      "general"
+    ],
+    "lyrics_summary": "Eternal dance floor anthem of youthful freedom."
+  },
+  {
+    "song_id": "real_0051",
+    "youtube_url": "https://www.youtube.com/results?search_query=Levitating+Dua+Lipa",
+    "playlist_url": null,
+    "title": "Levitating",
+    "artist": "Dua Lipa",
+    "genre": "Pop Disco",
+    "energy_level": "high",
+    "mood_tags": [
+      "happy",
+      "excited",
+      "romantic"
+    ],
+    "context_tags": [
+      "celebration",
+      "relationship"
+    ],
+    "lyrics_summary": "Floating on love and euphoria."
+  },
+  {
+    "song_id": "real_0052",
+    "youtube_url": "https://www.youtube.com/results?search_query=Uptown+Funk+Mark+Ronson+ft.+Bruno+Mars",
+    "playlist_url": null,
+    "title": "Uptown Funk",
+    "artist": "Mark Ronson ft. Bruno Mars",
+    "genre": "Funk Pop",
+    "energy_level": "high",
+    "mood_tags": [
+      "happy",
+      "confident",
+      "groovy"
+    ],
+    "context_tags": [
+      "celebration",
+      "general"
+    ],
+    "lyrics_summary": "Too hot to stop dont believe me just watch."
+  },
+  {
+    "song_id": "real_0053",
+    "youtube_url": "https://www.youtube.com/results?search_query=Shake+It+Off+Taylor+Swift",
+    "playlist_url": null,
+    "title": "Shake It Off",
+    "artist": "Taylor Swift",
+    "genre": "Pop",
+    "energy_level": "high",
+    "mood_tags": [
+      "happy",
+      "carefree",
+      "empowering"
+    ],
+    "context_tags": [
+      "celebration",
+      "breakup",
+      "stress"
+    ],
+    "lyrics_summary": "Brushing off haters and negativity with a smile."
+  },
+  {
+    "song_id": "real_0054",
+    "youtube_url": "https://www.youtube.com/results?search_query=Don%27t+Stop+Me+Now+Queen",
+    "playlist_url": null,
+    "title": "Don't Stop Me Now",
+    "artist": "Queen",
+    "genre": "Rock",
+    "energy_level": "high",
+    "mood_tags": [
+      "happy",
+      "energetic",
+      "carefree"
+    ],
+    "context_tags": [
+      "travel",
+      "celebration"
+    ],
+    "lyrics_summary": "Having a good time and nothing can stop it."
+  },
+  {
+    "song_id": "real_0055",
+    "youtube_url": "https://www.youtube.com/results?search_query=Walking+on+Sunshine+Katrina+and+the+Waves",
+    "playlist_url": null,
+    "title": "Walking on Sunshine",
+    "artist": "Katrina and the Waves",
+    "genre": "Pop",
+    "energy_level": "high",
+    "mood_tags": [
+      "happy",
+      "cheerful",
+      "uplifting"
+    ],
+    "context_tags": [
+      "celebration",
+      "general"
+    ],
+    "lyrics_summary": "Walking on sunshine and feeling good."
+  },
+  {
+    "song_id": "real_0056",
+    "youtube_url": "https://www.youtube.com/results?search_query=Can%27t+Hold+Us+Macklemore+and+Ryan+Lewis",
+    "playlist_url": null,
+    "title": "Can't Hold Us",
+    "artist": "Macklemore and Ryan Lewis",
+    "genre": "Hip-Hop",
+    "energy_level": "high",
+    "mood_tags": [
+      "celebratory",
+      "energetic",
+      "triumphant"
+    ],
+    "context_tags": [
+      "celebration",
+      "career"
+    ],
+    "lyrics_summary": "Nothing can stop the momentum of success."
+  },
+  {
+    "song_id": "real_0057",
+    "youtube_url": "https://www.youtube.com/results?search_query=All+of+Me+John+Legend",
+    "playlist_url": null,
+    "title": "All of Me",
+    "artist": "John Legend",
+    "genre": "R&B Soul",
+    "energy_level": "low",
+    "mood_tags": [
+      "romantic",
+      "love",
+      "emotional"
+    ],
+    "context_tags": [
+      "relationship"
+    ],
+    "lyrics_summary": "Loving someone completely flaws and all."
+  },
+  {
+    "song_id": "real_0058",
+    "youtube_url": "https://www.youtube.com/results?search_query=Perfect+Ed+Sheeran",
+    "playlist_url": null,
+    "title": "Perfect",
+    "artist": "Ed Sheeran",
+    "genre": "Pop",
+    "energy_level": "low",
+    "mood_tags": [
+      "romantic",
+      "love",
+      "sweet"
+    ],
+    "context_tags": [
+      "relationship",
+      "celebration"
+    ],
+    "lyrics_summary": "Finding the perfect person and dancing in the dark."
+  },
+  {
+    "song_id": "real_0059",
+    "youtube_url": "https://www.youtube.com/results?search_query=Thinking+Out+Loud+Ed+Sheeran",
+    "playlist_url": null,
+    "title": "Thinking Out Loud",
+    "artist": "Ed Sheeran",
+    "genre": "Pop Soul",
+    "energy_level": "low",
+    "mood_tags": [
+      "romantic",
+      "love",
+      "warm"
+    ],
+    "context_tags": [
+      "relationship"
+    ],
+    "lyrics_summary": "Love that grows stronger with time."
+  },
+  {
+    "song_id": "real_0060",
+    "youtube_url": "https://www.youtube.com/results?search_query=Can%27t+Help+Falling+in+Love+Elvis+Presley",
+    "playlist_url": null,
+    "title": "Can't Help Falling in Love",
+    "artist": "Elvis Presley",
+    "genre": "Pop",
+    "energy_level": "low",
+    "mood_tags": [
+      "romantic",
+      "classic",
+      "sweet"
+    ],
+    "context_tags": [
+      "relationship"
+    ],
+    "lyrics_summary": "Helplessly inevitably falling in love."
+  },
+  {
+    "song_id": "real_0061",
+    "youtube_url": "https://www.youtube.com/results?search_query=A+Thousand+Years+Christina+Perri",
+    "playlist_url": null,
+    "title": "A Thousand Years",
+    "artist": "Christina Perri",
+    "genre": "Pop",
+    "energy_level": "low",
+    "mood_tags": [
+      "romantic",
+      "emotional",
+      "love"
+    ],
+    "context_tags": [
+      "relationship"
+    ],
+    "lyrics_summary": "Loving someone for a thousand years and a thousand more."
+  },
+  {
+    "song_id": "real_0062",
+    "youtube_url": "https://www.youtube.com/results?search_query=Make+You+Feel+My+Love+Adele",
+    "playlist_url": null,
+    "title": "Make You Feel My Love",
+    "artist": "Adele",
+    "genre": "Pop Soul",
+    "energy_level": "low",
+    "mood_tags": [
+      "romantic",
+      "warm",
+      "love"
+    ],
+    "context_tags": [
+      "relationship"
+    ],
+    "lyrics_summary": "Willing to do anything to make you feel loved."
+  },
+  {
+    "song_id": "real_0063",
+    "youtube_url": "https://www.youtube.com/results?search_query=Shallow+Lady+Gaga+and+Bradley+Cooper",
+    "playlist_url": null,
+    "title": "Shallow",
+    "artist": "Lady Gaga and Bradley Cooper",
+    "genre": "Pop Rock",
+    "energy_level": "medium",
+    "mood_tags": [
+      "romantic",
+      "emotional",
+      "deep"
+    ],
+    "context_tags": [
+      "relationship"
+    ],
+    "lyrics_summary": "Diving deep into love and vulnerability."
+  },
+  {
+    "song_id": "real_0064",
+    "youtube_url": "https://www.youtube.com/results?search_query=Love+Story+Taylor+Swift",
+    "playlist_url": null,
+    "title": "Love Story",
+    "artist": "Taylor Swift",
+    "genre": "Country Pop",
+    "energy_level": "medium",
+    "mood_tags": [
+      "romantic",
+      "sweet",
+      "nostalgic"
+    ],
+    "context_tags": [
+      "relationship"
+    ],
+    "lyrics_summary": "Romeo save me its a love story baby just say yes."
+  },
+  {
+    "song_id": "real_0065",
+    "youtube_url": "https://www.youtube.com/results?search_query=Sunset+Lover+Petit+Biscuit",
+    "playlist_url": null,
+    "title": "Sunset Lover",
+    "artist": "Petit Biscuit",
+    "genre": "Electronic",
+    "energy_level": "low",
+    "mood_tags": [
+      "relaxed",
+      "chill",
+      "dreamy"
+    ],
+    "context_tags": [
+      "travel",
+      "general"
+    ],
+    "lyrics_summary": "Golden hour feelings in electronic form."
+  },
+  {
+    "song_id": "real_0066",
+    "youtube_url": "https://www.youtube.com/results?search_query=Breathe+Pink+Floyd",
+    "playlist_url": null,
+    "title": "Breathe",
+    "artist": "Pink Floyd",
+    "genre": "Rock",
+    "energy_level": "low",
+    "mood_tags": [
+      "relaxed",
+      "peaceful",
+      "chill"
+    ],
+    "context_tags": [
+      "stress",
+      "general"
+    ],
+    "lyrics_summary": "Breathe in the air dont be afraid to care."
+  },
+  {
+    "song_id": "real_0067",
+    "youtube_url": "https://www.youtube.com/results?search_query=Here+Comes+the+Sun+The+Beatles",
+    "playlist_url": null,
+    "title": "Here Comes the Sun",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "energy_level": "low",
+    "mood_tags": [
+      "peaceful",
+      "happy",
+      "warm"
+    ],
+    "context_tags": [
+      "stress",
+      "general"
+    ],
+    "lyrics_summary": "Its alright the sun is coming after a long cold lonely winter."
+  },
+  {
+    "song_id": "real_0068",
+    "youtube_url": "https://www.youtube.com/results?search_query=What+a+Wonderful+World+Louis+Armstrong",
+    "playlist_url": null,
+    "title": "What a Wonderful World",
+    "artist": "Louis Armstrong",
+    "genre": "Jazz",
+    "energy_level": "low",
+    "mood_tags": [
+      "peaceful",
+      "happy",
+      "grateful"
+    ],
+    "context_tags": [
+      "general",
+      "stress"
+    ],
+    "lyrics_summary": "Appreciating the simple beauty all around us."
+  },
+  {
+    "song_id": "real_0069",
+    "youtube_url": "https://www.youtube.com/results?search_query=Banana+Pancakes+Jack+Johnson",
+    "playlist_url": null,
+    "title": "Banana Pancakes",
+    "artist": "Jack Johnson",
+    "genre": "Acoustic Pop",
+    "energy_level": "low",
+    "mood_tags": [
+      "relaxed",
+      "cozy",
+      "happy"
+    ],
+    "context_tags": [
+      "general",
+      "stress"
+    ],
+    "lyrics_summary": "Staying in bed listening to the rain and making banana pancakes."
+  },
+  {
+    "song_id": "real_0070",
+    "youtube_url": "https://www.youtube.com/results?search_query=Better+Together+Jack+Johnson",
+    "playlist_url": null,
+    "title": "Better Together",
+    "artist": "Jack Johnson",
+    "genre": "Acoustic Pop",
+    "energy_level": "low",
+    "mood_tags": [
+      "relaxed",
+      "warm",
+      "romantic"
+    ],
+    "context_tags": [
+      "relationship",
+      "general"
+    ],
+    "lyrics_summary": "Everything is better when were together."
+  },
+  {
+    "song_id": "real_0071",
+    "youtube_url": "https://www.youtube.com/results?search_query=Fade+Into+You+Mazzy+Star",
+    "playlist_url": null,
+    "title": "Fade Into You",
+    "artist": "Mazzy Star",
+    "genre": "Dream Pop",
+    "energy_level": "low",
+    "mood_tags": [
+      "calming",
+      "dreamy",
+      "melancholic"
+    ],
+    "context_tags": [
+      "stress",
+      "general"
+    ],
+    "lyrics_summary": "Ethereal hazy soundscape for drifting and de-stressing."
+  },
+  {
+    "song_id": "real_0072",
+    "youtube_url": "https://www.youtube.com/results?search_query=The+Sound+of+Silence+Simon+and+Garfunkel",
+    "playlist_url": null,
+    "title": "The Sound of Silence",
+    "artist": "Simon and Garfunkel",
+    "genre": "Folk",
+    "energy_level": "low",
+    "mood_tags": [
+      "reflective",
+      "peaceful",
+      "melancholic"
+    ],
+    "context_tags": [
+      "stress",
+      "general"
+    ],
+    "lyrics_summary": "Hello darkness my old friend in the sound of silence."
+  },
+  {
+    "song_id": "real_0073",
+    "youtube_url": "https://www.youtube.com/results?search_query=Turn+Down+for+What+DJ+Snake+and+Lil+Jon",
+    "playlist_url": null,
+    "title": "Turn Down for What",
+    "artist": "DJ Snake and Lil Jon",
+    "genre": "Electronic",
+    "energy_level": "high",
+    "mood_tags": [
+      "energetic",
+      "workout",
+      "party"
+    ],
+    "context_tags": [
+      "gym",
+      "workout",
+      "celebration"
+    ],
+    "lyrics_summary": "Maximum energy party anthem."
+  },
+  {
+    "song_id": "real_0074",
+    "youtube_url": "https://www.youtube.com/results?search_query=Pump+It+Black+Eyed+Peas",
+    "playlist_url": null,
+    "title": "Pump It",
+    "artist": "Black Eyed Peas",
+    "genre": "Hip-Hop Dance",
+    "energy_level": "high",
+    "mood_tags": [
+      "workout",
+      "energetic",
+      "pump"
+    ],
+    "context_tags": [
+      "gym",
+      "workout"
+    ],
+    "lyrics_summary": "Pumping up the crowd with relentless energy."
+  },
+  {
+    "song_id": "real_0075",
+    "youtube_url": "https://www.youtube.com/results?search_query=Boom+Tiesto+ft.+Sevenn",
+    "playlist_url": null,
+    "title": "Boom",
+    "artist": "Tiesto ft. Sevenn",
+    "genre": "Electronic",
+    "energy_level": "high",
+    "mood_tags": [
+      "workout",
+      "energetic",
+      "powerful"
+    ],
+    "context_tags": [
+      "gym",
+      "workout"
+    ],
+    "lyrics_summary": "Explosive energy drop for peak performance."
+  },
+  {
+    "song_id": "real_0076",
+    "youtube_url": "https://www.youtube.com/results?search_query=Jump+Van+Halen",
+    "playlist_url": null,
+    "title": "Jump",
+    "artist": "Van Halen",
+    "genre": "Rock",
+    "energy_level": "high",
+    "mood_tags": [
+      "workout",
+      "energetic",
+      "fun"
+    ],
+    "context_tags": [
+      "gym",
+      "workout"
+    ],
+    "lyrics_summary": "Go ahead and jump classic rock anthem."
+  },
+  {
+    "song_id": "real_0077",
+    "youtube_url": "https://www.youtube.com/results?search_query=Thunderstruck+AC%2FDC",
+    "playlist_url": null,
+    "title": "Thunderstruck",
+    "artist": "AC/DC",
+    "genre": "Rock",
+    "energy_level": "high",
+    "mood_tags": [
+      "workout",
+      "powerful",
+      "intense"
+    ],
+    "context_tags": [
+      "gym",
+      "workout",
+      "gaming"
+    ],
+    "lyrics_summary": "Thunderstruck electric guitar riff for pure energy."
+  },
+  {
+    "song_id": "real_0078",
+    "youtube_url": "https://www.youtube.com/results?search_query=Welcome+to+the+Jungle+Guns+N+Roses",
+    "playlist_url": null,
+    "title": "Welcome to the Jungle",
+    "artist": "Guns N Roses",
+    "genre": "Rock",
+    "energy_level": "high",
+    "mood_tags": [
+      "workout",
+      "intense",
+      "powerful"
+    ],
+    "context_tags": [
+      "gym",
+      "workout"
+    ],
+    "lyrics_summary": "In the jungle welcome to the wild side."
+  },
+  {
+    "song_id": "real_0079",
+    "youtube_url": "https://www.youtube.com/results?search_query=Remember+the+Name+Fort+Minor",
+    "playlist_url": null,
+    "title": "Remember the Name",
+    "artist": "Fort Minor",
+    "genre": "Hip-Hop",
+    "energy_level": "high",
+    "mood_tags": [
+      "motivational",
+      "workout",
+      "focused"
+    ],
+    "context_tags": [
+      "gym",
+      "workout",
+      "career"
+    ],
+    "lyrics_summary": "10 percent luck 20 percent skill 15 percent concentrated power of will."
+  },
+  {
+    "song_id": "real_0080",
+    "youtube_url": "https://www.youtube.com/results?search_query=Levels+Avicii",
+    "playlist_url": null,
+    "title": "Levels",
+    "artist": "Avicii",
+    "genre": "Electronic",
+    "energy_level": "high",
+    "mood_tags": [
+      "workout",
+      "euphoric",
+      "energetic"
+    ],
+    "context_tags": [
+      "gym",
+      "workout",
+      "celebration"
+    ],
+    "lyrics_summary": "Oh sometimes I get a good feeling yeah."
+  },
+  {
+    "song_id": "real_0081",
+    "youtube_url": "https://www.youtube.com/results?search_query=Breathe+%282+AM%29+Anna+Nalick",
+    "playlist_url": null,
+    "title": "Breathe (2 AM)",
+    "artist": "Anna Nalick",
+    "genre": "Folk Pop",
+    "energy_level": "low",
+    "mood_tags": [
+      "calming",
+      "comforting",
+      "anxious"
+    ],
+    "context_tags": [
+      "stress",
+      "study",
+      "career"
+    ],
+    "lyrics_summary": "Just breathe life is overwhelming but manageable."
+  },
+  {
+    "song_id": "real_0082",
+    "youtube_url": "https://www.youtube.com/results?search_query=Shake+it+Out+Florence+and+the+Machine",
+    "playlist_url": null,
+    "title": "Shake it Out",
+    "artist": "Florence and the Machine",
+    "genre": "Indie Rock",
+    "energy_level": "medium",
+    "mood_tags": [
+      "healing",
+      "empowering",
+      "emotional"
+    ],
+    "context_tags": [
+      "stress",
+      "breakup"
+    ],
+    "lyrics_summary": "Shaking out the darkness and dancing through the difficult times."
+  },
+  {
+    "song_id": "real_0083",
+    "youtube_url": "https://www.youtube.com/results?search_query=Dog+Days+Are+Over+Florence+and+the+Machine",
+    "playlist_url": null,
+    "title": "Dog Days Are Over",
+    "artist": "Florence and the Machine",
+    "genre": "Indie Rock",
+    "energy_level": "high",
+    "mood_tags": [
+      "healing",
+      "uplifting",
+      "emotional"
+    ],
+    "context_tags": [
+      "stress",
+      "breakup",
+      "career"
+    ],
+    "lyrics_summary": "The dog days are over happiness is coming run."
+  },
+  {
+    "song_id": "real_0084",
+    "youtube_url": "https://www.youtube.com/results?search_query=Dont+Panic+Coldplay",
+    "playlist_url": null,
+    "title": "Dont Panic",
+    "artist": "Coldplay",
+    "genre": "Rock",
+    "energy_level": "low",
+    "mood_tags": [
+      "calming",
+      "peaceful",
+      "reassuring"
+    ],
+    "context_tags": [
+      "stress",
+      "anxious"
+    ],
+    "lyrics_summary": "We live in a beautiful world yeah we do dont panic."
+  },
+  {
+    "song_id": "real_0085",
+    "youtube_url": "https://www.youtube.com/results?search_query=Everything%27s+Not+Lost+Coldplay",
+    "playlist_url": null,
+    "title": "Everything's Not Lost",
+    "artist": "Coldplay",
+    "genre": "Rock",
+    "energy_level": "medium",
+    "mood_tags": [
+      "comforting",
+      "hopeful",
+      "healing"
+    ],
+    "context_tags": [
+      "stress",
+      "career",
+      "breakup"
+    ],
+    "lyrics_summary": "When I counted up my demons I found everything is not lost."
+  },
+  {
+    "song_id": "real_0086",
+    "youtube_url": "https://www.youtube.com/results?search_query=The+A+Team+Ed+Sheeran",
+    "playlist_url": null,
+    "title": "The A Team",
+    "artist": "Ed Sheeran",
+    "genre": "Folk Pop",
+    "energy_level": "low",
+    "mood_tags": [
+      "emotional",
+      "comforting",
+      "sad"
+    ],
+    "context_tags": [
+      "stress",
+      "general"
+    ],
+    "lyrics_summary": "A haunting story of struggle told with delicate acoustic guitar."
+  },
+  {
+    "song_id": "real_0087",
+    "youtube_url": "https://www.youtube.com/results?search_query=Jai+Ho+A.R.+Rahman",
+    "playlist_url": null,
+    "title": "Jai Ho",
+    "artist": "A.R. Rahman",
+    "genre": "Bollywood",
+    "energy_level": "high",
+    "mood_tags": [
+      "celebratory",
+      "motivational",
+      "triumphant"
+    ],
+    "context_tags": [
+      "celebration",
+      "career"
+    ],
+    "lyrics_summary": "Victory anthem from Slumdog Millionaire."
+  },
+  {
+    "song_id": "real_0088",
+    "youtube_url": "https://www.youtube.com/results?search_query=Tum+Hi+Ho+Arijit+Singh",
+    "playlist_url": null,
+    "title": "Tum Hi Ho",
+    "artist": "Arijit Singh",
+    "genre": "Bollywood",
+    "energy_level": "low",
+    "mood_tags": [
+      "romantic",
+      "emotional",
+      "love"
+    ],
+    "context_tags": [
+      "relationship"
+    ],
+    "lyrics_summary": "You are my everything iconic Bollywood love ballad."
+  },
+  {
+    "song_id": "real_0089",
+    "youtube_url": "https://www.youtube.com/results?search_query=Kabira+Arijit+Singh",
+    "playlist_url": null,
+    "title": "Kabira",
+    "artist": "Arijit Singh",
+    "genre": "Bollywood",
+    "energy_level": "low",
+    "mood_tags": [
+      "romantic",
+      "melancholic",
+      "soulful"
+    ],
+    "context_tags": [
+      "relationship",
+      "breakup"
+    ],
+    "lyrics_summary": "Soulful longing for a lost love."
+  },
+  {
+    "song_id": "real_0090",
+    "youtube_url": "https://www.youtube.com/results?search_query=Chaiyya+Chaiyya+A.R.+Rahman",
+    "playlist_url": null,
+    "title": "Chaiyya Chaiyya",
+    "artist": "A.R. Rahman",
+    "genre": "Bollywood",
+    "energy_level": "high",
+    "mood_tags": [
+      "happy",
+      "celebratory",
+      "romantic"
+    ],
+    "context_tags": [
+      "celebration",
+      "travel"
+    ],
+    "lyrics_summary": "Joyful Bollywood classic about dancing on a train."
+  },
+  {
+    "song_id": "real_0091",
+    "youtube_url": "https://www.youtube.com/results?search_query=Phir+Le+Aya+Dil+Arijit+Singh",
+    "playlist_url": null,
+    "title": "Phir Le Aya Dil",
+    "artist": "Arijit Singh",
+    "genre": "Bollywood",
+    "energy_level": "low",
+    "mood_tags": [
+      "heartbroken",
+      "romantic",
+      "emotional"
+    ],
+    "context_tags": [
+      "breakup",
+      "relationship"
+    ],
+    "lyrics_summary": "Heart returns again to the same pain of lost love."
+  },
+  {
+    "song_id": "real_0092",
+    "youtube_url": "https://www.youtube.com/results?search_query=Kun+Faya+Kun+A.R.+Rahman",
+    "playlist_url": null,
+    "title": "Kun Faya Kun",
+    "artist": "A.R. Rahman",
+    "genre": "Bollywood Sufi",
+    "energy_level": "low",
+    "mood_tags": [
+      "peaceful",
+      "spiritual",
+      "calm"
+    ],
+    "context_tags": [
+      "stress",
+      "study",
+      "general"
+    ],
+    "lyrics_summary": "Sufi devotional song meaning be and it is peace through faith."
+  },
+  {
+    "song_id": "real_0093",
+    "youtube_url": "https://www.youtube.com/results?search_query=Zinda+Siddharth+Mahadevan",
+    "playlist_url": null,
+    "title": "Zinda",
+    "artist": "Siddharth Mahadevan",
+    "genre": "Bollywood",
+    "energy_level": "high",
+    "mood_tags": [
+      "motivational",
+      "empowering",
+      "triumphant"
+    ],
+    "context_tags": [
+      "career",
+      "startup",
+      "gym"
+    ],
+    "lyrics_summary": "Feeling alive and unstoppable from Bhaag Milkha Bhaag."
+  },
+  {
+    "song_id": "real_0094",
+    "youtube_url": "https://www.youtube.com/results?search_query=Dil+Dhadakne+Do+Priyanka+Chopra",
+    "playlist_url": null,
+    "title": "Dil Dhadakne Do",
+    "artist": "Priyanka Chopra",
+    "genre": "Bollywood",
+    "energy_level": "medium",
+    "mood_tags": [
+      "happy",
+      "carefree",
+      "adventurous"
+    ],
+    "context_tags": [
+      "travel",
+      "celebration"
+    ],
+    "lyrics_summary": "Let your heart soar and be free."
+  },
+  {
+    "song_id": "real_0095",
+    "youtube_url": "https://www.youtube.com/results?search_query=Dynamite+BTS",
+    "playlist_url": null,
+    "title": "Dynamite",
+    "artist": "BTS",
+    "genre": "K-Pop",
+    "energy_level": "high",
+    "mood_tags": [
+      "happy",
+      "energetic",
+      "celebratory"
+    ],
+    "context_tags": [
+      "celebration",
+      "general"
+    ],
+    "lyrics_summary": "Pure joy and positive energy to light up any room."
+  },
+  {
+    "song_id": "real_0096",
+    "youtube_url": "https://www.youtube.com/results?search_query=Butter+BTS",
+    "playlist_url": null,
+    "title": "Butter",
+    "artist": "BTS",
+    "genre": "K-Pop",
+    "energy_level": "high",
+    "mood_tags": [
+      "happy",
+      "confident",
+      "smooth"
+    ],
+    "context_tags": [
+      "celebration",
+      "career"
+    ],
+    "lyrics_summary": "Smooth charming confidence in everything you do."
+  },
+  {
+    "song_id": "real_0097",
+    "youtube_url": "https://www.youtube.com/results?search_query=How+You+Like+That+BLACKPINK",
+    "playlist_url": null,
+    "title": "How You Like That",
+    "artist": "BLACKPINK",
+    "genre": "K-Pop",
+    "energy_level": "high",
+    "mood_tags": [
+      "confident",
+      "powerful",
+      "comeback"
+    ],
+    "context_tags": [
+      "career",
+      "gym",
+      "breakup"
+    ],
+    "lyrics_summary": "Rising from rock bottom in style."
+  },
+  {
+    "song_id": "real_0098",
+    "youtube_url": "https://www.youtube.com/results?search_query=Boy+With+Luv+BTS+ft.+Halsey",
+    "playlist_url": null,
+    "title": "Boy With Luv",
+    "artist": "BTS ft. Halsey",
+    "genre": "K-Pop",
+    "energy_level": "high",
+    "mood_tags": [
+      "happy",
+      "romantic",
+      "sweet"
+    ],
+    "context_tags": [
+      "relationship",
+      "celebration"
+    ],
+    "lyrics_summary": "A small love that means the whole world."
+  },
+  {
+    "song_id": "real_0099",
+    "youtube_url": "https://www.youtube.com/results?search_query=Megalovania+Toby+Fox",
+    "playlist_url": null,
+    "title": "Megalovania",
+    "artist": "Toby Fox",
+    "genre": "Video Game",
+    "energy_level": "high",
+    "mood_tags": [
+      "intense",
+      "epic",
+      "focused"
+    ],
+    "context_tags": [
+      "gaming"
+    ],
+    "lyrics_summary": "Undertale iconic battle theme of determination."
+  },
+  {
+    "song_id": "real_0100",
+    "youtube_url": "https://www.youtube.com/results?search_query=One-Winged+Angel+Nobuo+Uematsu",
+    "playlist_url": null,
+    "title": "One-Winged Angel",
+    "artist": "Nobuo Uematsu",
+    "genre": "Orchestral",
+    "energy_level": "high",
+    "mood_tags": [
+      "epic",
+      "intense",
+      "dramatic"
+    ],
+    "context_tags": [
+      "gaming"
+    ],
+    "lyrics_summary": "Final Fantasy VII final boss theme."
+  },
+  {
+    "song_id": "real_0101",
+    "youtube_url": "https://www.youtube.com/results?search_query=Through+the+Fire+and+Flames+DragonForce",
+    "playlist_url": null,
+    "title": "Through the Fire and Flames",
+    "artist": "DragonForce",
+    "genre": "Metal",
+    "energy_level": "high",
+    "mood_tags": [
+      "intense",
+      "epic",
+      "energetic"
+    ],
+    "context_tags": [
+      "gaming",
+      "gym"
+    ],
+    "lyrics_summary": "On a dark stormy night through the fire and flames we carry on."
+  },
+  {
+    "song_id": "real_0102",
+    "youtube_url": "https://www.youtube.com/results?search_query=Bangarang+Skrillex",
+    "playlist_url": null,
+    "title": "Bangarang",
+    "artist": "Skrillex",
+    "genre": "Dubstep",
+    "energy_level": "high",
+    "mood_tags": [
+      "intense",
+      "energetic",
+      "focused"
+    ],
+    "context_tags": [
+      "gaming",
+      "gym"
+    ],
+    "lyrics_summary": "Explosive dubstep drop for maximum energy."
+  },
+  {
+    "song_id": "real_0103",
+    "youtube_url": "https://www.youtube.com/results?search_query=Eye+of+the+Tiger+Survivor",
+    "playlist_url": null,
+    "title": "Eye of the Tiger",
+    "artist": "Survivor",
+    "genre": "Rock",
+    "energy_level": "high",
+    "mood_tags": [
+      "confident",
+      "focused",
+      "powerful"
+    ],
+    "context_tags": [
+      "interview",
+      "competition"
+    ],
+    "lyrics_summary": "Rising to the challenge fighting to stay alive and victorious."
+  },
+  {
+    "song_id": "real_0104",
+    "youtube_url": "https://www.youtube.com/results?search_query=We+Will+Rock+You+Queen",
+    "playlist_url": null,
+    "title": "We Will Rock You",
+    "artist": "Queen",
+    "genre": "Rock",
+    "energy_level": "high",
+    "mood_tags": [
+      "confident",
+      "powerful",
+      "motivational"
+    ],
+    "context_tags": [
+      "interview",
+      "career",
+      "gym"
+    ],
+    "lyrics_summary": "We will we will rock you stomp clap."
+  },
+  {
+    "song_id": "real_0105",
+    "youtube_url": "https://www.youtube.com/results?search_query=Confident+Demi+Lovato",
+    "playlist_url": null,
+    "title": "Confident",
+    "artist": "Demi Lovato",
+    "genre": "Pop",
+    "energy_level": "high",
+    "mood_tags": [
+      "confident",
+      "empowering",
+      "strong"
+    ],
+    "context_tags": [
+      "interview",
+      "career"
+    ],
+    "lyrics_summary": "What's wrong with being confident."
+  },
+  {
+    "song_id": "real_0106",
+    "youtube_url": "https://www.youtube.com/results?search_query=Brave+Sara+Bareilles",
+    "playlist_url": null,
+    "title": "Brave",
+    "artist": "Sara Bareilles",
+    "genre": "Pop",
+    "energy_level": "high",
+    "mood_tags": [
+      "brave",
+      "empowering",
+      "motivational"
+    ],
+    "context_tags": [
+      "interview",
+      "career",
+      "stress"
+    ],
+    "lyrics_summary": "Say what you wanna say and let the words fall out honestly I wanna see you be brave."
+  },
+  {
+    "song_id": "real_0107",
+    "youtube_url": "https://www.youtube.com/results?search_query=Mad+World+Gary+Jules",
+    "playlist_url": null,
+    "title": "Mad World",
+    "artist": "Gary Jules",
+    "genre": "Alternative",
+    "energy_level": "low",
+    "mood_tags": [
+      "melancholic",
+      "reflective",
+      "burned_out"
+    ],
+    "context_tags": [
+      "stress",
+      "burned_out"
+    ],
+    "lyrics_summary": "Quiet intimate reflection on the noise and exhaustion of modern life."
+  },
+  {
+    "song_id": "real_0108",
+    "youtube_url": "https://www.youtube.com/results?search_query=In+My+Life+The+Beatles",
+    "playlist_url": null,
+    "title": "In My Life",
+    "artist": "The Beatles",
+    "genre": "Rock",
+    "energy_level": "low",
+    "mood_tags": [
+      "reflective",
+      "nostalgic",
+      "peaceful"
+    ],
+    "context_tags": [
+      "general",
+      "burned_out"
+    ],
+    "lyrics_summary": "Reflecting on all the places and people youve loved in life."
+  },
+  {
+    "song_id": "real_0109",
+    "youtube_url": "https://www.youtube.com/results?search_query=Fast+Car+Tracy+Chapman",
+    "playlist_url": null,
+    "title": "Fast Car",
+    "artist": "Tracy Chapman",
+    "genre": "Folk Rock",
+    "energy_level": "medium",
+    "mood_tags": [
+      "hopeful",
+      "melancholic",
+      "reflective"
+    ],
+    "context_tags": [
+      "travel",
+      "career",
+      "burned_out"
+    ],
+    "lyrics_summary": "Wanting to escape and start a new life."
+  },
+  {
+    "song_id": "real_0110",
+    "youtube_url": "https://www.youtube.com/results?search_query=Vienna+Billy+Joel",
+    "playlist_url": null,
+    "title": "Vienna",
+    "artist": "Billy Joel",
+    "genre": "Pop Rock",
+    "energy_level": "low",
+    "mood_tags": [
+      "peaceful",
+      "reflective",
+      "comforting"
+    ],
+    "context_tags": [
+      "burned_out",
+      "career",
+      "stress"
+    ],
+    "lyrics_summary": "Slow down you crazy child you're so ambitious. Vienna waits for you."
+  },
+  {
+    "song_id": "real_0111",
+    "youtube_url": "https://www.youtube.com/results?search_query=Holocene+Bon+Iver",
+    "playlist_url": null,
+    "title": "Holocene",
+    "artist": "Bon Iver",
+    "genre": "Indie Folk",
+    "energy_level": "low",
+    "mood_tags": [
+      "reflective",
+      "peaceful",
+      "melancholic"
+    ],
+    "context_tags": [
+      "burned_out",
+      "general"
+    ],
+    "lyrics_summary": "Feeling small but significant in the vastness of the world."
+  }
+]
