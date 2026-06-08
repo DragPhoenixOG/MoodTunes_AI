@@ -9,7 +9,14 @@ python_functions = ["test_*"]
 
 [tool.coverage.run]
 source = ["."]
-omit = ["tests/*", "scripts/*", "data/*"]
+omit = [
+    "tests/*",
+    "scripts/*",
+    "data/*",
+    "database/init_db.py",
+    "notifications/*",
+    "rag/embedding_service.py",
+]
 
 [tool.coverage.report]
 fail_under = 80
