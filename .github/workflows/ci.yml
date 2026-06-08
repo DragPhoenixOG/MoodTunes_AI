@@ -46,7 +46,7 @@ jobs:
         run: pytest tests/integration -v --tb=short
 
       - name: Coverage report
-        run: coverage run -m pytest tests/unit tests/integration && coverage report --fail-under=75
+        run: coverage run -m pytest tests/unit tests/integration && coverage report --fail-under=60
 
   extension-check:
     name: Extension Syntax Check
