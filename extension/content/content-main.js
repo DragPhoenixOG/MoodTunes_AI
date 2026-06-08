@@ -1,6 +1,6 @@
-// MoodTunes AI - Content Script (no imports, no modules)
-var DEBOUNCE_MS = 5000;
-var MIN_TEXT_LENGTH = 30;
+// MoodTunes AI - Content Script
+var DEBOUNCE_MS      = 3000;   // 3 seconds after last change
+var MIN_TEXT_LENGTH  = 15;     // minimum chars to trigger
 var MAX_CONTEXT_CHARS = 2000;
 
 var BLOCKED_DOMAINS = [
@@ -52,64 +52,79 @@ function extractText(platform) {
   var texts = [];
   for (var i = 0; i < elements.length; i++) {
     var t = elements[i].innerText && elements[i].innerText.trim();
-    if (t && t.length > 5) texts.push(t);
+    if (t && t.length > 3) texts.push(t);
   }
-  return texts.slice(-20).join('\n').slice(0, MAX_CONTEXT_CHARS);
+  // Get last 10 messages for context
+  return texts.slice(-10).join('\n').slice(0, MAX_CONTEXT_CHARS);
 }
 
-// Safe message sender - handles extension context invalidated gracefully
+// Simple hash to detect new content
+function simpleHash(str) {
+  var hash = 0;
+  for (var i = 0; i < str.length; i++) {
+    hash = ((hash << 5) - hash) + str.charCodeAt(i);
+    hash = hash & hash;
+  }
+  return hash;
+}
+
 function safeSendMessage(payload) {
   try {
-    chrome.runtime.sendMessage({
-      type: 'CONTEXT_UPDATE',
-      payload: payload
-    }, function(response) {
-      // Ignore response errors
+    chrome.runtime.sendMessage({ type: 'CONTEXT_UPDATE', payload: payload }, function(response) {
       if (chrome.runtime.lastError) {
-        // Extension was reloaded - stop the observer silently
-        if (observer) {
-          observer.disconnect();
-        }
+        if (observer) observer.disconnect();
       }
     });
-  } catch (e) {
-    // Extension context invalidated - stop observing
-    if (observer) {
-      observer.disconnect();
-    }
-    console.log('[MoodTunes] Extension reloaded - please refresh this page');
+  } catch(e) {
+    if (observer) observer.disconnect();
+    console.log('[MoodTunes] Extension reloaded - refresh this page (F5)');
   }
 }
 
-var observer = null;
+var observer  = null;
+var lastHash  = 0;
+var lastCount = 0;
 
 if (!isSensitivePage()) {
-  var platform = detectPlatform();
-  console.log('[MoodTunes] Active on', platform);
-
+  var platform     = detectPlatform();
   var debounceTimer = null;
-  var lastText = '';
+
+  console.log('[MoodTunes] Active on', platform);
 
   observer = new MutationObserver(function() {
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(function() {
-      var raw = extractText(platform);
-      var clean = sanitizeText(raw);
-      if (clean.length < MIN_TEXT_LENGTH) return;
-      if (clean === lastText) return;
-      lastText = clean;
-      console.log('[MoodTunes] Change detected, sending update...');
-      safeSendMessage({ source: platform, text: clean });
+
+      var raw      = extractText(platform);
+      var clean    = sanitizeText(raw);
+      var newHash  = simpleHash(clean);
+
+      // Count current messages
+      var sel = 'p, h1, h2, h3';
+      if (platform === 'whatsapp') sel = '[data-pre-plain-text], .copyable-text';
+      var count = document.querySelectorAll(sel).length;
+
+      // Trigger if:
+      // 1. Content hash changed (new messages or edits)
+      // 2. AND text is long enough
+      if (newHash !== lastHash && clean.length >= MIN_TEXT_LENGTH) {
+        lastHash  = newHash;
+        lastCount = count;
+        console.log('[MoodTunes] New content detected (' + clean.length + ' chars), sending...');
+        safeSendMessage({ source: platform, text: clean });
+      }
+
     }, DEBOUNCE_MS);
   });
 
   observer.observe(document.body, { childList: true, subtree: true });
 
-  // Initial scan after page loads
+  // Initial scan
   setTimeout(function() {
-    var raw = extractText(platform);
+    var raw   = extractText(platform);
     var clean = sanitizeText(raw);
     if (clean.length >= MIN_TEXT_LENGTH) {
+      lastHash = simpleHash(clean);
       safeSendMessage({ source: platform, text: clean });
     }
   }, 3000);

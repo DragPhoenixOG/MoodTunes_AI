@@ -1,20 +1,23 @@
 // MoodTunes AI - Service Worker
 
 var BACKEND_URL = 'http://localhost:8000';
-var MIN_INTERVAL_MS = 60000;
+var MIN_INTERVAL_MS = 30000;   // 30 seconds between recommendations
 var lastRecommendationAt = 0;
+var lastEmotion = '';
 var snoozeUntil = 0;
 
 var EMOTION_EMOJI = {
-  happy: '😊', sad: '😢', motivated: '💪', excited: '🎉',
-  confident: '😎', anxious: '😰', focused: '🎯', burned_out: '😩',
-  romantic: '💕', heartbroken: '💔', relaxed: '😌', angry: '😤',
-  celebratory: '🎊', productive: '⚡', workout: '🏋️'
+  happy: '\u{1F60A}', sad: '\u{1F622}', motivated: '\u{1F4AA}', excited: '\u{1F389}',
+  confident: '\u{1F60E}', anxious: '\u{1F630}', focused: '\u{1F3AF}', burned_out: '\u{1F629}',
+  romantic: '\u{1F495}', heartbroken: '\u{1F494}', relaxed: '\u{1F60C}', angry: '\u{1F624}',
+  celebratory: '\u{1F38A}', productive: '\u26A1', workout: '\u{1F3CB}'
 };
 
-// Load snooze on startup
-chrome.storage.local.get('snoozeUntil', function(data) {
-  snoozeUntil = data.snoozeUntil || 0;
+// Load saved state on startup
+chrome.storage.local.get(['snoozeUntil', 'lastEmotion', 'lastRecommendationAt'], function(data) {
+  snoozeUntil            = data.snoozeUntil || 0;
+  lastEmotion            = data.lastEmotion || '';
+  lastRecommendationAt   = data.lastRecommendationAt || 0;
 });
 
 // Message listener
@@ -72,12 +75,16 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
 
 function handleContextUpdate(payload) {
   var now = Date.now();
-  if (now - lastRecommendationAt < MIN_INTERVAL_MS) {
-    console.log('[MoodTunes SW] Rate limited, skipping');
+
+  if (snoozeUntil && now < snoozeUntil) {
+    console.log('[MoodTunes SW] Snoozed until ' + new Date(snoozeUntil).toLocaleTimeString());
     return;
   }
-  if (snoozeUntil && now < snoozeUntil) {
-    console.log('[MoodTunes SW] Snoozed');
+
+  var timeSinceLast = now - lastRecommendationAt;
+  if (timeSinceLast < MIN_INTERVAL_MS) {
+    var remaining = Math.ceil((MIN_INTERVAL_MS - timeSinceLast) / 1000);
+    console.log('[MoodTunes SW] Rate limited. Next recommendation in ' + remaining + 's');
     return;
   }
 
@@ -107,13 +114,23 @@ function handleContextUpdate(payload) {
       return resp.json();
     })
     .then(function(result) {
-      console.log('[MoodTunes SW] Got:', result.recommendation && result.recommendation.song);
+      var song    = result.recommendation && result.recommendation.song;
+      var emotion = result.emotion_result && result.emotion_result.emotion;
+      console.log('[MoodTunes SW] Got: ' + song + ' | Emotion: ' + emotion);
+
+      // Update state
       lastRecommendationAt = Date.now();
+      lastEmotion = emotion || '';
+      chrome.storage.local.set({
+        lastRecommendationAt: lastRecommendationAt,
+        lastEmotion: lastEmotion
+      });
+
       saveRecommendation(result);
       showNotification(result);
     })
     .catch(function(err) {
-      console.error('[MoodTunes SW] Error:', err.message);
+      console.error('[MoodTunes SW] Error: ' + err.message);
     });
   });
 }
@@ -121,42 +138,56 @@ function handleContextUpdate(payload) {
 function showNotification(data) {
   var rec = data.recommendation;
   if (!rec) return;
+
   var emotion = (data.emotion_result && data.emotion_result.emotion) || 'relaxed';
-  var emoji = EMOTION_EMOJI[emotion] || '🎵';
+  var emoji   = EMOTION_EMOJI[emotion] || '\uD83C\uDFB5';
   var notifId = 'moodtunes-' + Date.now();
+
+  // Ensure direct YouTube URL
+  var playUrl = rec.youtube_url || '';
+  if (playUrl.indexOf('watch?v=') !== -1 && playUrl.indexOf('autoplay') === -1) {
+    playUrl = playUrl + '&autoplay=1';
+  }
 
   chrome.storage.local.set({
     ['pendingNotif_' + notifId]: {
-      song_id: rec.song_id,
-      youtube_url: rec.youtube_url
+      song_id:     rec.song_id,
+      youtube_url: playUrl
     }
   });
 
+  var reason = rec.reason || '';
+  if (reason.length > 100) reason = reason.slice(0, 97) + '...';
+
   chrome.notifications.create(notifId, {
-    type: 'basic',
-    iconUrl: chrome.runtime.getURL('icons/icon128.png'),
-    title: emoji + ' MoodTunes — ' + capitalize(emotion),
-    message: rec.song + ' by ' + rec.artist,
-    contextMessage: rec.reason,
+    type:           'basic',
+    iconUrl:        chrome.runtime.getURL('icons/icon128.png'),
+    title:          emoji + ' ' + rec.song + ' - ' + rec.artist,
+    message:        'Detected: ' + capitalize(emotion),
+    contextMessage: reason,
     buttons: [
-      { title: '▶ Play Song' },
-      { title: '👍 Like' },
-      { title: '👎 Dislike' }
+      { title: '\u25B6 Play Now' },
+      { title: '\uD83D\uDC4D Like' },
+      { title: '\uD83D\uDC4E Dislike' }
     ],
-    priority: 2
+    priority:       2,
+    requireInteraction: false
   });
 
-  setTimeout(function() { chrome.notifications.clear(notifId); }, 20000);
+  setTimeout(function() { chrome.notifications.clear(notifId); }, 25000);
 }
 
 function handleFeedback(payload) {
   chrome.storage.local.get('userId', function(data) {
-    var body = JSON.parse(JSON.stringify(payload));
-    body.user_id = data.userId || 'unknown';
+    var body = {
+      user_id:  data.userId || 'unknown',
+      song_id:  payload.song_id,
+      action:   payload.action
+    };
     fetch(BACKEND_URL + '/api/v1/feedback', {
-      method: 'POST',
+      method:  'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
+      body:    JSON.stringify(body)
     }).catch(function() {});
   });
 }
@@ -164,12 +195,12 @@ function handleFeedback(payload) {
 function sendFeedback(songId, action) {
   chrome.storage.local.get('userId', function(data) {
     fetch(BACKEND_URL + '/api/v1/feedback', {
-      method: 'POST',
+      method:  'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        user_id: data.userId || 'unknown',
-        song_id: songId,
-        action: action
+      body:    JSON.stringify({
+        user_id:  data.userId || 'unknown',
+        song_id:  songId,
+        action:   action
       })
     }).catch(function() {});
   });
@@ -184,14 +215,13 @@ function handleSnooze(minutes) {
 function saveRecommendation(data) {
   chrome.storage.local.get('recommendations', function(stored) {
     var list = stored.recommendations || [];
-    var item = {
+    list.unshift({
       recommendation: data.recommendation,
       emotion_result: data.emotion_result,
       context_result: data.context_result,
-      intent_result: data.intent_result,
-      timestamp: Date.now()
-    };
-    list.unshift(item);
+      intent_result:  data.intent_result,
+      timestamp:      Date.now()
+    });
     if (list.length > 50) list.pop();
     chrome.storage.local.set({ recommendations: list });
   });

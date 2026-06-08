@@ -4,8 +4,6 @@
 
 ---
 
-## ✨ What's Different from the Ollama Edition
-
 | Feature | Ollama Edition | **Groq Edition** |
 |---|---|---|
 | LLM inference | Local Ollama (8GB+ RAM) | **Groq API (free tier)** |
@@ -70,8 +68,8 @@ FastAPI Backend  (localhost:8000)
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/yourname/moodtunes-ai
-cd moodtunes-ai
+git clone https://github.com/DragPhoenixOG/MoodTunes_AI
+cd MoodTunes_AI
 
 # Install all Python dependencies
 pip install -r backend/requirements.txt
