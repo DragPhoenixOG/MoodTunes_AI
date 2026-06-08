@@ -2,6 +2,7 @@
 import pytest
 from httpx import AsyncClient, ASGITransport
 from unittest.mock import patch, AsyncMock, MagicMock
+from database.db import init_db
 
 from app import app
 from models.schemas import (
@@ -18,6 +19,9 @@ MOCK_CONTEXT = ContextResult(context="interview", confidence=95)
 MOCK_INTENT  = IntentResult(intent="Need Confidence")
 MOCK_MEMORY  = UserMemory(user_id="test123")
 
+@pytest.fixture(autouse=True)
+async def setup_db():
+    await init_db()
 
 @pytest.fixture
 def anyio_backend():
